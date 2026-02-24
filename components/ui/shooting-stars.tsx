@@ -48,8 +48,8 @@ export function ShootingStars({
 }: ShootingStarsProps) {
   const [stars, setStars] = useState<ShootingStar[]>([])
   const containerRef = useRef<HTMLDivElement>(null)
-  const animationRef = useRef<number>()
-  const timeoutRef = useRef<NodeJS.Timeout>()
+  const animationRef = useRef<number>(1)
+  const timeoutRef = useRef<NodeJS.Timeout>
 
   const getRandomStartPoint = useCallback(() => {
     const container = containerRef.current
